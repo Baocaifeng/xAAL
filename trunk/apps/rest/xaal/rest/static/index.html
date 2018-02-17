@@ -1,0 +1,47 @@
+<html>
+<head>
+  <title>xAAL JSON / List of devices</title>
+  <script type="text/javascript" src="jquery.min.js"></script>
+  <link rel=stylesheet type="text/css" href="style.css">
+<body>
+
+<h1>xAAL REST API on <span id=hostname></span></h1>
+
+<h2>Devices</h2>
+
+<table id="devices">
+</table>
+
+<h2>API</h2>
+<table>
+<tr><th>Name</th><th>value</th></tr>
+<tr><td>JSON URL</td><td><span id="resturl">xxx</span></td></tr>
+</table>
+
+
+
+<script type="text/javascript">
+var url=window.location.origin+"/devices";
+$("#resturl").html("<a href="+url+">"+url+"</a>");
+$("#hostname").html(window.location.hostname);
+
+function update() {
+  $.getJSON("/devices", function(result){
+        $("#devices").html("<tr><th>DevType</th><th>Address</th></tr>");
+        $.each(result, function(i, field){
+            var devtype= field['devtype'];
+            var addr= field['address'];
+            var json= "./device.html?addr="+addr;
+            var link= "<a href="+json+">"+addr+"</a>";
+            $("#devices").append("<tr><td>"+devtype+"</td><td>" +link+ "</td></tr>");
+        });
+    });
+}
+        
+setInterval(update,(1000*60));
+update();        
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<html>
+<head>
+  <title>xAAL JSON / List of devices</title>
+  <script type="text/javascript" src="jquery.min.js"></script>
+  <link rel=stylesheet type="text/css" href="style.css">
+<body>
+
+<h1><a href="./index.html">xAAL Device</a></h1>
+<h2>Information</h2>
+<table>
+<tr><th>Name</th><th>value</th></tr>
+<tr><td>address</td><td><span id="address">undef</span></td></tr>
+<tr><td>devtype</td><td><span id="devtype">undef</span></td></tr>
+<tr><td>JSON URL</td><td><span id="resturl">undef</span></td></tr>
+</table>
+
+
+<h2>Description</h2>
+<table id="description">
+</table>
+
+<br/>
+
+<h2>Attributes</h2>
+<table id="attributes">
+</table>
+
+<script type="text/javascript">
+function getUrlVars () {
+    var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++)
+    {
+        hash = hashes[i].split('=');
+        vars.push(hash[0]);
+        vars[hash[0]] = hash[1];
+    }
+    return vars;
+}
+
+
+function update() {
+    var addr=getUrlVars()['addr'];
+    var url=window.location.origin+"/devices/"+addr;
+    $.getJSON(url, function(result){
+        $("#address").text(result["address"]);
+        var schema= "http://recherche.telecom-bretagne.eu/xaal/documentation/" + result["devtype"];
+        $("#devtype").html("<a href="+schema+">"+result["devtype"]+"</a>");
+        $("#resturl").html("<a href="+url+">"+url+"</a>");
+           
+        $("#description").html("<tr><th>Name</th><th>Value</th></tr>");
+        $.each(result["description"], function(id, field){
+            if (field) {
+                $("#description").append("<tr><td>"+id+"</td><td>"+field+"</td></tr>");
+            }
+        });
+
+        $("#attributes").html("<tr><th>Name</th><th>Value</th></tr>");        
+        $.each(result["attributes"], function(id, field){          
+            $("#attributes").append("<tr><td>"+id+"</td><td>"+field+"</td></tr>");
+        });
+        
+    });
+}
+        
+setInterval(update,(1000*30));
+update();  
+</script>
+
+</body>
+</html>

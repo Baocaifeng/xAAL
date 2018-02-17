@@ -1,0 +1,13 @@
+#=============================================================================
+# xAAL lib (xaal.lib) configuration file
+#=============================================================================
+
+#address = 224.0.29.200             # Mutlicast address of the xAAL bus  
+#port = 1235                        # Multicast port of the bus
+#hops = 10                          # how many hops 
+#alive_timer = 500                  # time in seconds between to alive message
+#cipher_window = 60                 # size in seconds of the cipher window
+
+# use xaal-keygen to build the key 
+# key=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
