@@ -40,6 +40,14 @@ $ xaal-keygen
 xaal-keygen will compute an key for a given passphrase. Edit the xaal.ini
 file according to your needs.
 
+"""
+cassiel@dell:~/xAAL/trunk/libs/lib$ xaal-keygen
+Please set key in config file [/home/cassiel/.xaal/xaal.ini]
+Please enter your passphrase: baocaifeng
+Cut & Paste this key in your xAAL config-file
+key=06e98632d029e53450c58c29571f9d6aa92018e43ef6de218ef46b2f22cf599a
+"""
+
 Test
 ~~~~
 First, you can launch a message dumper with this tools
