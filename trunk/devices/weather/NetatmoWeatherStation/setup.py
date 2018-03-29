@@ -6,29 +6,25 @@ with open('README.rst') as f:
 VERSION = "0.1"
 
 setup(
-    name='xaal.dashboard',
+    name="xaal.netatmo",
     version=VERSION,
     license='GPL License',
-    author='Jerome Kerdreux',
-    author_email='Jerome.Kerdreux@imt-atlantique.fr',
+    author='Caifeng BAO',
+    author_email='caifeng.bao@imt-atlantique.fr',
     #url='',
-    description=('xAAL Dashboard'),
+    description=('xAAL devices for Netatmo Weather Station' ),
     long_description=long_description,
     classifiers=[
         'Programming Language :: Python',
         'Topic :: Software Development :: Libraries :: Python Modules',
     ],
-    keywords=['xaal', 'socketio','html','dashboard'],
+    keywords=['xaal', 'netatmo','weather','station'],
     platforms='any',
     packages=find_packages(),
     include_package_data=True,
-
     install_requires=[
         'xaal.lib',
-        'bottle',
-        'gevent',
-        'gevent-websocket',
-        'python-socketio',
-        'mako',
+        #'requests',
+        #'json'
     ]
 )

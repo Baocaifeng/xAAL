@@ -48,6 +48,7 @@ class LMSensors:
                     self.engine.add_device(dev)
                     dev.dump()
 
+
     def process(self):
         """ loop of lmsensors and update the devices attributes"""
         for chip in sensors.iter_detected_chips():

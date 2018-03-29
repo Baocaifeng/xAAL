@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: xaal.tools
+Version: 0.1
+Summary: xAAL devices tools
+Home-page: UNKNOWN
+Author: Jerome Kerdreux
+Author-email: Jerome.Kerdreux@imt-atlantique.fr
+License: GPL License
+Description: UNKNOWN
+Keywords: xaal,tools
+Platform: any
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules

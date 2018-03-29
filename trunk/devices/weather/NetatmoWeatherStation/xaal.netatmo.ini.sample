@@ -1,0 +1,8 @@
+[config]
+grant_type      = 'xxxxxxx'
+client_id       = 'xxxxxxxxxxxxxxxxxxxxxx'
+client_secret   = 'xxxxxxxxxxxxxxxxxxxxxx'
+password        = 'xxxxxxxxxxxxxxxxxxxxxxxx',
+username        = 'xxxxxxxxxxxxxxx'
+scope           = 'xxxxxxxxxxxxxxxxxxxxx'
+device_id       = 'xx:xx:xx:xx:xx:xx'

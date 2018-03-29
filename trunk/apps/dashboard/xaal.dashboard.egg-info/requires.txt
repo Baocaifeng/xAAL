@@ -1,0 +1,6 @@
+xaal.lib
+bottle
+gevent
+gevent-websocket
+python-socketio
+mako

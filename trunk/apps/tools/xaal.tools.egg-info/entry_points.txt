@@ -1,0 +1,9 @@
+[console_scripts]
+xaal-dumper = xaal.tools.dumper:main
+xaal-info = xaal.tools.info:main
+xaal-isalive = xaal.tools.isalive:main
+xaal-keygen = xaal.tools.keygen:main
+xaal-log = xaal.tools.log:main
+xaal-tail = xaal.tools.tail:main
+xaal-walker = xaal.tools.walker:main
+
